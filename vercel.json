@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "framework": null,
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.6.0"
+  "builds": [
+    {
+      "src": "/api/index.php",
+      "use": "vercel-php@0.7.1"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/(css|js|images)/(.*)",
@@ -23,7 +23,6 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_URL": "https://b-link-backend.vercel.app",
     "APP_CONFIG_CACHE": "/tmp/config.php",
     "APP_EVENTS_CACHE": "/tmp/events.php",
     "APP_PACKAGES_CACHE": "/tmp/packages.php",
